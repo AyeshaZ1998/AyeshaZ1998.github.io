@@ -63,7 +63,7 @@ header.site {
 .hero { padding: 84px 0 64px; border-bottom: 1px solid var(--line); }
 .hero-grid { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; }
 .hero-photo { order: -1; }
-.hero-photo img { width: 280px; height: 280px; object-fit: cover; object-position: center 25%; border-radius: 50%; border: 4px solid var(--card); box-shadow: 0 14px 40px rgba(0,0,0,0.12); }
+.hero-photo img { width: 340px; height: 340px; object-fit: cover; object-position: center 25%; border-radius: 50%; border: 4px solid var(--card); box-shadow: 0 14px 40px rgba(0,0,0,0.12); }
 .hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); letter-spacing: -0.02em; }
 .hero .tagline { font-size: 1.25rem; color: var(--muted); margin-top: 16px; max-width: 640px; }
 .hero .contact { margin-top: 28px; display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.95rem; }
