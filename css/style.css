@@ -5,8 +5,8 @@
 :root {
   --ink:        #1a1a1a;   /* main text */
   --paper:      #ffffff;   /* page background */
-  --accent:     #a01b2e;   /* deep red */
-  --accent-2:   #7a1422;   /* darker red */
+  --accent:     #7d1220;   /* deep red */
+  --accent-2:   #5c0d18;   /* darker red */
   --muted:      #5f5a57;   /* secondary text */
   --line:       #ececec;   /* hairlines / borders */
   --card:       #ffffff;   /* card background */
@@ -23,10 +23,10 @@ body {
   font-family: 'Public Sans', sans-serif;
   background-color: var(--paper);
   background-image:
-    radial-gradient(at 12% 8%, rgba(160,27,46,0.10) 0px, transparent 45%),
-    radial-gradient(at 88% 4%, rgba(160,27,46,0.07) 0px, transparent 40%),
-    radial-gradient(at 75% 70%, rgba(122,20,34,0.06) 0px, transparent 45%),
-    radial-gradient(at 5% 85%, rgba(160,27,46,0.05) 0px, transparent 40%);
+    radial-gradient(at 10% 6%, rgba(125,18,32,0.22) 0px, transparent 42%),
+    radial-gradient(at 90% 2%, rgba(125,18,32,0.16) 0px, transparent 38%),
+    radial-gradient(at 78% 68%, rgba(92,13,24,0.15) 0px, transparent 42%),
+    radial-gradient(at 4% 88%, rgba(125,18,32,0.13) 0px, transparent 40%);
   background-attachment: fixed;
   color: var(--ink);
   line-height: 1.65;
@@ -52,18 +52,18 @@ header.site {
   display: flex; align-items: center; justify-content: space-between;
   height: 64px;
 }
-.brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; color: var(--ink); }
+.brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; color: var(--accent); }
 .brand:hover { text-decoration: none; }
 .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
 .nav-links a {
-  color: var(--ink); font-size: 0.92rem; font-weight: 500;
+  color: var(--accent); font-size: 0.92rem; font-weight: 600;
   padding-bottom: 4px; border-bottom: 2px solid transparent;
 }
 .nav-links a:hover { border-bottom-color: var(--accent); text-decoration: none; }
 .nav-links a.active { border-bottom-color: var(--accent); color: var(--accent); }
 
 /* hamburger for mobile */
-.menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ink); }
+.menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--accent); }
 
 /* ---------- Hero ---------- */
 .hero { padding: 84px 0 64px; border-bottom: 1px solid var(--line); }
