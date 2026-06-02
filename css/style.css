@@ -103,6 +103,10 @@ header.site {
 .card li { margin-bottom: 8px; color: var(--ink); }
 .card .date { float: right; font-size: 0.8rem; color: var(--muted); font-weight: 500; }
 .card p { margin-top: 12px; color: var(--ink); }
+.card-note { margin-top: 6px; font-size: 0.9rem; color: var(--muted); }
+.card-note em { color: var(--accent); }
+.card-skills { margin-top: 14px; font-size: 0.82rem; color: var(--accent); font-weight: 500; }
+
 
 /* ---------- Timeline (experience / education) ---------- */
 .entry { padding: 22px 24px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; background: var(--card); margin-bottom: 16px; }
