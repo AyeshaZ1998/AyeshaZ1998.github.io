@@ -4,13 +4,13 @@
    ========================================================= */
 :root {
   --ink:        #1a1a1a;   /* main text */
-  --paper:      #f7f4ee;   /* page background (warm off-white) */
-  --accent:     #6b4f3f;   /* warm brown accent */
-  --accent-2:   #2f5d50;   /* deep green secondary accent */
-  --muted:      #6f6a62;   /* secondary text */
-  --line:       #e0dad0;   /* hairlines / borders */
+  --paper:      #ffffff;   /* page background */
+  --accent:     #a01b2e;   /* deep red */
+  --accent-2:   #7a1422;   /* darker red */
+  --muted:      #5f5a57;   /* secondary text */
+  --line:       #ececec;   /* hairlines / borders */
   --card:       #ffffff;   /* card background */
-  --max:        1080px;    /* content max width */
+  --max:        1080px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@300;400;500;600&display=swap');
@@ -21,7 +21,13 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Public Sans', sans-serif;
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(at 12% 8%, rgba(160,27,46,0.10) 0px, transparent 45%),
+    radial-gradient(at 88% 4%, rgba(160,27,46,0.07) 0px, transparent 40%),
+    radial-gradient(at 75% 70%, rgba(122,20,34,0.06) 0px, transparent 45%),
+    radial-gradient(at 5% 85%, rgba(160,27,46,0.05) 0px, transparent 40%);
+  background-attachment: fixed;
   color: var(--ink);
   line-height: 1.65;
   font-weight: 400;
@@ -38,7 +44,7 @@ a:hover { text-decoration: underline; }
 /* ---------- Top navigation ---------- */
 header.site {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(247,244,238,0.9);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -54,7 +60,7 @@ header.site {
   padding-bottom: 4px; border-bottom: 2px solid transparent;
 }
 .nav-links a:hover { border-bottom-color: var(--accent); text-decoration: none; }
-.nav-links a.active { border-bottom-color: var(--accent); }
+.nav-links a.active { border-bottom-color: var(--accent); color: var(--accent); }
 
 /* hamburger for mobile */
 .menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ink); }
@@ -82,6 +88,7 @@ header.site {
 /* ---------- Cards ---------- */
 .card {
   background: var(--card); border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
   border-radius: 10px; padding: 26px;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
@@ -117,13 +124,13 @@ header.site {
 
 /* ---------- Buttons ---------- */
 .btn {
-  display: inline-block; background: var(--ink); color: var(--paper);
-  padding: 11px 22px; border-radius: 8px; font-weight: 500; font-size: 0.92rem;
-  border: 1px solid var(--ink); transition: opacity 0.15s ease;
+  display: inline-block; background: var(--accent); color: #fff;
+  padding: 11px 22px; border-radius: 8px; font-weight: 600; font-size: 0.92rem;
+  border: 1px solid var(--accent); transition: background 0.15s ease;
 }
-.btn:hover { opacity: 0.85; text-decoration: none; }
-.btn.ghost { background: transparent; color: var(--ink); }
-.btn.ghost:hover { background: var(--ink); color: var(--paper); }
+.btn:hover { background: var(--accent-2); border-color: var(--accent-2); text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.ghost:hover { background: var(--accent); color: #fff; }
 .btn-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 
 /* ---------- Embeds (video / story maps) ---------- */
@@ -153,7 +160,7 @@ footer.site { padding: 40px 0; text-align: center; color: var(--muted); font-siz
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
   .grid.two, .grid.three { grid-template-columns: 1fr; }
-   .hero-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
   .hero-photo { order: -1; }
   .hero-photo img { width: 160px; height: 160px; }
   .hero .contact, .hero .btn-row { justify-content: center; }
