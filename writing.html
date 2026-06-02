@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Writing &amp; Code — Ayesha Zafar</title>
+<title>Portfolio — Ayesha Zafar</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site">
   <div class="wrap nav">
     <a href="index.html" class="brand">Ayesha Zafar</a>
@@ -16,8 +15,7 @@
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="experience.html">Experience</a>
-      <a href="writing.html" class="active">Writing &amp; Code</a>
-      <a href="maps.html">Maps &amp; Media</a>
+      <a href="writing.html" class="active">Portfolio</a>
     </nav>
   </div>
 </header>
@@ -25,8 +23,8 @@
 <section class="hero" style="padding:64px 0 40px">
   <div class="wrap">
     <p class="eyebrow">Portfolio</p>
-    <h1 style="font-size:clamp(2.2rem,5vw,3.4rem)">Writing &amp; Code Samples</h1>
-    <p class="tagline">Reports, papers, and code. Drop your files into the <code>assets/docs</code> and <code>assets/code</code> folders and link them below.</p>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.4rem)">Portfolio</h1>
+    <p class="tagline">A collection of my writing, code, and data visualization work.</p>
   </div>
 </section>
 
@@ -36,29 +34,34 @@
     <p class="eyebrow">Writing</p>
     <h2>Writing samples</h2>
     <p class="lead">Policy reports, research papers, and analytical essays.</p>
-
     <ul class="doc-list">
-      <!-- TO ADD A SAMPLE: copy one <li> block, change the title, description, and href. -->
       <li>
         <div>
-          <div class="doc-title">Homelessness Policy Report (H.R. 1 Impact Assessment)</div>
-          <div class="doc-desc">Co-authored policy report · Western Regional Advocacy Project</div>
+          <div class="doc-title">MPP Capstone: Southeast Asian Deportation Analysis</div>
+          <div class="doc-desc">Policy report · UC Berkeley &amp; AAPI Force</div>
         </div>
-        <a class="btn ghost" href="assets/docs/homelessness-report.pdf" target="_blank">Read</a>
+        <span class="btn ghost" style="opacity:0.6;cursor:default">To be uploaded soon</span>
+      </li>
+      <li>
+        <div>
+          <div class="doc-title">Homelessness Policy Brief</div>
+          <div class="doc-desc">Policy brief · Western Regional Advocacy Project</div>
+        </div>
+        <a class="btn ghost" href="assets/docs/policy-brief.pdf" target="_blank">Read</a>
+      </li>
+      <li>
+        <div>
+          <div class="doc-title">Media &amp; Gender Inequality in Pakistan</div>
+          <div class="doc-desc">MSc thesis · University of Manchester</div>
+        </div>
+        <a class="btn ghost" href="assets/docs/media-thesis.pdf" target="_blank">Read</a>
       </li>
       <li>
         <div>
           <div class="doc-title">Women's Political Participation in Uganda</div>
-          <div class="doc-desc">Fieldwork research essay (Distinction) · University of Manchester</div>
+          <div class="doc-desc">Fieldwork research essay · University of Manchester</div>
         </div>
         <a class="btn ghost" href="assets/docs/uganda-essay.pdf" target="_blank">Read</a>
-      </li>
-      <li>
-        <div>
-          <div class="doc-title">The Role of Media in Gender Inequality in Pakistan</div>
-          <div class="doc-desc">Graduate thesis (Merit) · University of Manchester</div>
-        </div>
-        <a class="btn ghost" href="assets/docs/media-thesis.pdf" target="_blank">Read</a>
       </li>
     </ul>
   </div>
@@ -69,32 +72,65 @@
   <div class="wrap">
     <p class="eyebrow">Code</p>
     <h2>Code samples</h2>
-    <p class="lead">Reproducible analysis pipelines in R and Python. Link to a GitHub repo or to a file in <code>assets/code</code>.</p>
+    <p class="lead">Reproducible analysis pipelines in R, hosted on GitHub.</p>
+    <div class="grid">
 
+      <div class="card">
+        <h3>COVID-19 Policy Stringency Analysis (R)</h3>
+        <div class="meta">R · tidyverse · Data visualization · Regression</div>
+        <p>An independent analysis examining how government policy responses related to COVID-19 cases and deaths across countries and income groups. The project merges Oxford's COVID policy and stringency data, Our World in Data mortality figures, and World Bank income classifications into a single cleaned dataset, then builds choropleth world maps of stringency and income levels, generates distribution charts across income groups, runs correlation and multicollinearity checks, and fits lagged regression models linking policy measures to case and death outcomes, complete with coefficient plots.</p>
+        <p class="card-skills">R · tidyverse · Data cleaning &amp; merging · ggplot2 · Choropleth mapping · Correlation analysis · Lagged regression · Reproducible R Markdown</p>
+        <div class="btn-row" style="margin-top:14px">
+          <a class="btn ghost" href="assets/code/Coding_Sample_AyeshaZafar.html" target="_blank">View analysis</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Southeast Asian Deportation Analysis (R)</h3>
+        <div class="meta">R · Administrative data · Poisson regression</div>
+        <p>The full code behind my MPP capstone, analyzing detention and deportation patterns among Southeast Asian nationals using four large administrative datasets. The repository covers data cleaning and merging across sources, population-at-risk estimation, and Poisson regression modeling of enforcement trends.</p>
+        <p class="card-skills">R · Large administrative datasets · Data cleaning &amp; merging · Poisson regression · Data visualization · Reproducible workflows</p>
+        <div class="btn-row" style="margin-top:14px">
+          <a class="btn ghost" href="https://github.com/AyeshaZ1998/UCBerkeley_AAPIForce_Capstone" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Cross-Country Study on Culture &amp; Economic Incentives (R)</h3>
+        <div class="meta">R · Panel data · Fixed-effects regression</div>
+        <p>The code behind my independent study building a harmonized cross-country panel of 156 countries over two decades. The repository covers data consolidation from multiple global datasets, missing-data handling, and fixed-effects and robust regressions with clustered standard errors, all scripted as a reproducible R Markdown workflow.</p>
+        <p class="card-skills">R · R Markdown · Panel data · Fixed-effects regression · Clustered standard errors · Data harmonization · Data visualization</p>
+        <div class="btn-row" style="margin-top:14px">
+          <a class="btn ghost" href="https://github.com/AyeshaZ1998/IndependentStudy_Code" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAPS ============ -->
+<section class="section reveal">
+  <div class="wrap">
+    <p class="eyebrow">Maps</p>
+    <h2>Maps &amp; spatial work</h2>
+    <p class="lead">Interactive ArcGIS story maps I built and published during my time at UC Berkeley. I no longer have access to the live versions after graduating, so they are included here as video walkthroughs.</p>
     <div class="grid two">
+
       <div class="card">
-        <h3>Cross-country Panel Analysis (R)</h3>
-        <div class="meta">R · Fixed Effects · Reproducible Workflow</div>
-        <ul>
-          <li>156 countries × 1998–2021 × 26 indicators.</li>
-          <li>Imputation, missingness flags, robust regressions, publication-ready figures.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn ghost" href="https://github.com/YOUR-USERNAME/panel-analysis" target="_blank">View on GitHub</a>
+        <h3>Story Map One</h3>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="ArcGIS Story Map 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
 
       <div class="card">
-        <h3>Conservation Tech Survey Analysis (R)</h3>
-        <div class="meta">R · Longitudinal Viz · WWF</div>
-        <ul>
-          <li>Five years of survey data across eleven technologies.</li>
-          <li>Cleaning, recoding, longitudinal visualizations.</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn ghost" href="assets/code/wwf-analysis.R" target="_blank">View Code</a>
+        <h3>Story Map Two</h3>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="ArcGIS Story Map 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -102,7 +138,6 @@
 <footer class="site">
   <div class="wrap">© <span id="yr"></span> Ayesha Zafar</div>
 </footer>
-
 <script src="css/main.js"></script>
 </body>
 </html>
