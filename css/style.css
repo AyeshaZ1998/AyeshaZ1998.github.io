@@ -102,6 +102,7 @@ header.site {
 .card ul { margin: 12px 0 0 18px; }
 .card li { margin-bottom: 8px; color: var(--ink); }
 .card .date { float: right; font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+.card p { margin-top: 12px; color: var(--ink); }
 
 /* ---------- Timeline (experience / education) ---------- */
 .entry { padding: 22px 24px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; background: var(--card); margin-bottom: 16px; }
