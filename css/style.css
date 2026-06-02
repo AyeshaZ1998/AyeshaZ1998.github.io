@@ -5,7 +5,7 @@
 :root {
   --ink:        #1c2b2d;   /* main text (deep slate-teal) */
   --paper:      #ffffff;   /* page background */
-  --accent:     #2f6f6b;   /* teal-green */
+  --accent:     #1b4332;   /* dark forest green */
   --accent-2:   #1f4e6b;   /* deep blue */
   --muted:      #5c6b6e;   /* secondary text */
   --line:       #dde7e6;   /* hairlines / borders */
@@ -51,15 +51,15 @@ header.site {
   display: flex; align-items: center; justify-content: space-between;
   height: 64px;
 }
-.brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; color: var(--accent); }
+.brand { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; color: #fff; }
 .brand:hover { text-decoration: none; }
 .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
 .nav-links a {
-  color: var(--ink); font-size: 0.92rem; font-weight: 500;
+  color: #fff; font-size: 0.92rem; font-weight: 500;
   padding-bottom: 4px; border-bottom: 2px solid transparent;
 }
-.nav-links a:hover { border-bottom-color: var(--accent); text-decoration: none; }
-.nav-links a.active { border-bottom-color: var(--accent); color: var(--accent); }
+.nav-links a:hover { border-bottom-color: #fff; text-decoration: none; }
+.nav-links a.active { border-bottom-color: #fff; color: #fff; }
 
 /* hamburger for mobile */
 .menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--accent); }
