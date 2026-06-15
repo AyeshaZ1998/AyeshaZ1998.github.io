@@ -32,6 +32,7 @@ body {
   line-height: 1.65;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.15; font-weight: 600; }
@@ -62,7 +63,7 @@ header.site {
 .nav-links a.active { border-bottom-color: #fff; color: #fff; }
 
 /* hamburger for mobile */
-.menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--accent); }
+.menu-btn { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: #fff; line-height: 1; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 84px 0 64px; border-bottom: 1px solid var(--line); }
@@ -107,7 +108,6 @@ header.site {
 .card-note em { color: var(--accent); }
 .card-skills { margin-top: 14px; font-size: 0.82rem; color: var(--accent); font-weight: 500; }
 
-
 /* ---------- Timeline (experience / education) ---------- */
 .entry { padding: 22px 24px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; background: var(--card); margin-bottom: 16px; }
 .entry .top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; }
@@ -138,21 +138,25 @@ header.site {
 .btn-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 
 /* ---------- Embeds (video / story maps) ---------- */
-.embed {
+.embed, .video-wrap {
   position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 */
-  border-radius: 10px; overflow: hidden; border: 1px solid var(--line); margin-bottom: 10px;
+  height: 0;
+  border-radius: 10px; overflow: hidden; border: 1px solid var(--line); margin: 14px 0 10px;
 }
-.embed iframe, .embed video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.embed iframe, .embed video,
+.video-wrap iframe { position: absolute; inset: 0; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 .embed-caption { font-size: 0.9rem; color: var(--muted); margin-bottom: 30px; }
 
 /* ---------- Writing / code sample lists ---------- */
-.doc-list { list-style: none; }
+.doc-list { list-style: none; margin-top: 20px; }
 .doc-list li {
   display: flex; justify-content: space-between; align-items: center;
   padding: 16px 0; border-bottom: 1px solid var(--line); gap: 16px;
 }
-.doc-list .doc-title { font-weight: 500; }
-.doc-list .doc-desc { font-size: 0.88rem; color: var(--muted); }
+.doc-list .doc-title { font-weight: 600; color: var(--ink); }
+.doc-list .doc-desc { font-size: 0.88rem; color: var(--muted); margin-top: 2px; }
+.doc-note { font-size: 0.82rem; color: var(--accent); margin-top: 4px; font-style: italic; }
+.doc-list .btn { white-space: nowrap; flex-shrink: 0; }
 
 /* ---------- Footer ---------- */
 footer.site { padding: 40px 0; text-align: center; color: var(--muted); font-size: 0.88rem; border-top: 1px solid var(--line); }
@@ -163,17 +167,34 @@ footer.site { padding: 40px 0; text-align: center; color: var(--muted); font-siz
 
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
+  .wrap { padding: 0 18px; }
+
   .grid.two, .grid.three { grid-template-columns: 1fr; }
+
+  .hero { padding: 48px 0 40px; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
   .hero-photo { order: -1; }
   .hero-photo img { width: 160px; height: 160px; }
   .hero .contact, .hero .btn-row { justify-content: center; }
+
+  .section { padding: 44px 0; }
+
+  .card { padding: 22px; }
+
+  /* mobile nav dropdown — dark green so white links are visible */
   .menu-btn { display: block; }
   .nav-links {
     display: none; position: absolute; top: 64px; left: 0; right: 0;
-    flex-direction: column; background: var(--paper);
-    border-bottom: 1px solid var(--line); padding: 16px 24px; gap: 14px;
+    flex-direction: column; background: var(--accent);
+    border-bottom: 1px solid var(--accent-2); padding: 16px 24px; gap: 16px;
   }
   .nav-links.open { display: flex; }
+  .nav-links a { font-size: 1rem; }
+
+  /* stack doc-list rows so the button drops below the text */
+  .doc-list li { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .doc-list .btn { width: 100%; text-align: center; }
+
+  .entry { padding: 18px 18px; }
   .entry .when { white-space: normal; }
 }
